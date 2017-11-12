@@ -1,0 +1,86 @@
+<html>
+
+<style type="text/css">
+body
+{
+    background-image: url("images/useredit.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+</style>
+
+
+
+<div class="container">
+
+             
+<form ="updateprofile" class="form-horizontal">
+<div class="form-group">
+<p class="form-title">
+<font color="black">
+<h2>Update User Data</h2>
+<label class="control-label col-sm-2">Enter username</label>
+<div class="col-sm-4">
+ <input type="text"  ng-model="user.username" disabled><br>
+ </div>
+ </div>
+ 
+ <div class="form-group">
+<label class="control-label col-sm-2">Enter password</label>
+<div class="col-sm-4">
+ <input type="password" ng-model="user.password"><br>
+ </div></div>
+
+
+ <div class="form-group">
+<label class="control-label col-sm-2">Enter firstname</label>
+<div class="col-sm-4">
+<input type="text" ng-model="user.firstname"><br>
+</div></div>
+
+ <div class="form-group">
+<label class="control-label col-sm-2">Enter lastname</label>
+<div class="col-sm-4">
+ <input type="text" ng-model="user.lastname"><br>
+ </div>
+ </div>
+ <div class="form-group">
+<label class="control-label col-sm-2">Enter Email</label>
+<div class="col-sm-4">
+ 
+<input type="email" ng-model="user.email"><br>
+</div>
+</div>
+
+ <div class="form-group">
+<label class="control-label col-sm-2">Enter phonenumber</label>
+<div class="col-sm-4">
+ 
+<input type="text" ng-model="user.phonenumber"><br>
+
+</div>
+</div>
+
+<div class="form-group">
+<label class="control-label col-sm-2">Select Role</label>
+<div class="col-sm-4">
+<br>
+<input type="radio" value="STUDENT" ng-model="user.role">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role">Alumini<br>
+<input type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br>
+</div>
+</div>
+
+
+<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-4">
+			
+<input type="submit" value="EditProfile" class="btn btn-success btn-sm" ng-click="updateUser()">
+</div>
+</div>
+</form>
+</div>
+</html>

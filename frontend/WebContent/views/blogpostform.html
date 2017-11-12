@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="css/style.css">
+<style>
+body
+{
+    background-image: url("images/blog1.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+b
+{
+background-color:honeydew;
+}
+
+</style>
+<p class="form-title">
+              <font color="blue">
+<div class="container">
+<form>
+<div class="form-group">
+Enter Blog Title: <input type="text" ng-model="blogPost.blogTitle" class="form-control">
+</div>
+<div class="form-group">
+Enter Description: <textarea rows="5" cols="20" ng-model="blogPost.description" class="form-control">
+</textarea>
+</div>
+<input type="submit" ng-click="addBlogPost()" value="Add Blog Post">
+</form>
+</div>
+
+<div ng-show="currentUser.role=='ADMIN'">
+<font color="red">
+<h4>List of Blog Posts waiting for approval</h4><br></font>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Posted On</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#/getblogpostbyid/{{blog.id}}"><b>{{blog.blogTitle}}</b></a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'yyyy/MM/dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<font color="red">
+<h4>List of Blog Posts which are approved</h4><br>
+</font>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Posted On</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#/getblogpostbyid/{{blog.id}}"><b>{{blog.blogTitle}}</b></a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'yyyy/MM/dd'}}</td>
+</tr>
+</tr>
+</tbody>
+</table>
+</div>

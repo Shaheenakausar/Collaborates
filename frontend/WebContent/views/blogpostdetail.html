@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="css/style.css">
+<style>
+body
+{
+    background-image: url("images/blog1.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+
+</style>
+<p class="form-title">
+              <font color="blue">
+<div class="row">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div>
+<p class="form-title">
+              <font color="blue">
+<b>{{blogPost.blogTitle}}</b>
+</font></p>
+</div>
+<span>
+<strong><font color="red">CreatedBy:</font></strong><font color="blue">{{blogPost.postedBy.username}}</font><br>
+</span>
+<span>
+<strong><font color="red">Created On:</font></strong><font color="blue">{{blogPost.postedOn | date:'medium'}}</font></span>
+
+</div>
+<div class="panel-body">
+{{blogPost.description}}
+</div>
+</div>
+</div>
+</div>
+{{error.message}}
+<form>
+<textarea rows="4" cols="15" ng-model="blogComment.commentText"></textarea>
+<input type="submit" value="AddBlogPost"  ng-click="addComment()" class="btn btn-success btn-sm">
+</form>
+<a ng-click="getComments()"><b><font color="red">Show Comments</font></b></a>
+<ul ng-show="ShowComments">
+<li ng-repeat="blogComment in blogComments" style="list-style : none">
+<span>{{blogComment.commentText}}</span>
+<span><strong><font color="red">CommentedBy:</font></strong>{{blogComment.commentedBy.username}}</span>
+<span><strong><font color="red">CommentedOn:</font></strong>{{blogComment.commentedOn | date : 'MM/dd/yyyy'}}</span>
+</ul>

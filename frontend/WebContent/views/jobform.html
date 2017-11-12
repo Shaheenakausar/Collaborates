@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="css/style.css">
+<style>
+body
+{
+    background-image: url("images/job3.jpg");
+    background-repeat: no-repeat;
+	opacity:0.9;
+    background-size: 100%; 
+    padding-bottom: 75px;;
+}
+.navbar-default
+{
+	background-color: black;
+	color: white;
+}
+</style>
+<div class="container">
+<p class="form-title">
+              <font color="blue">
+<span style="color:red">{{error.message}}</span>
+<form>
+<font color="red">
+<h2>Enter Job Details</h2></font>
+<div class="form-group">
+Enter Job Title : <input type="text" ng-model="job.jobTitle" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Job Description: <textarea rows="4" cols="15" ng-model="job.jobDescription" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+Enter Skills Required: <input type="text" ng-model="job.skillRequired" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Years of Experience: <input type="text" ng-model="job.yrsOfExp" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Salary:<input type="text" ng-model="job.salary" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Location :<input type="text" ng-model="job.location" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Company Name: <input type="text" ng-model="job.companyname" class="form-control">
+</div>
+<div class="form-group">
+<label class="control-label col-sm-4">
+<input type="submit" value="SaveJob" class="btn btn-success btn-sm"  ng-click="saveJob()"></label>
+</div>
+
+
+</form>
+</div>

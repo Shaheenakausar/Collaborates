@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="css/style.css">
+<style>
+body
+{
+    background-image: url("images/blog1.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+table
+{
+ background-color:honeydew;
+ font-color:blue;
+} 
+</style>
+<div class="container">
+	<form name="listofblogposts" class="form-horizontal" >
+		<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-4">
+<div ng-show="currentUser.role=='ADMIN'">
+ <p><font color="red"><h4>List Of BlogPosts Waiting for Approval.</h4></font><p><br>
+
+<table class="table">
+<p><font color="blue">
+<thead>
+<p><font color="blue">
+<tr><th>Title</th><th>Author</th><th>Posted on</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#/approveblogpost/{{blog.id}}">{{blog.blogTitle}}</td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'yyyy/MM/dd'}}</td>
+</tr>
+</tbody></font></p>
+</table>
+</div>
+<div>
+<p><font color="red"><h4>List Of Blog Posts Which Are Approved</h4></font></p><br>
+<table class="table">
+<thead>
+
+<tr><th>Title</th><th>Author</th><th>Posted on</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#/getblogpostbyid/{{blog.id}}">{{blog.blogTitle}}</td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'yyyy/MM/dd'}}</td>
+</tr>
+</tbody>
+</p></font>
+</table>
+</div></div></div></form></div>

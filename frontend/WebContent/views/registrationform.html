@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+body
+{
+    background-image: url("images/signup.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+</style>
+
+<span style="color:red">{{error.message}}</span>
+
+
+
+			
+
+
+	<div class="container">
+	<form name="RegistrationForm" class="form-horizontal" >
+		<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-4">
+				<p class="form-title">
+              <font color="white">
+					<h4>Registration Form</h4>
+				</div>
+			</div>
+		
+		
+			<div class="form-group">
+				<label class="control-label col-sm-2"> Username:</label>
+				<div class="col-sm-4">
+					<input type="text"  ng-model="user.username" class="form-control" placeholder="Enter Username"  required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2"> Password:</label>
+				<div class="col-sm-4">
+					<input type="password" ng-model="user.password" class="form-control" placeholder="Enter password" required>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2"> FirstName:</label>
+				<div class="col-sm-4">
+					<input type="text" ng-model="user.firstname" class="form-control" placeholder="Enter firstname" required>
+				</div>
+				</div>
+				
+			<div class="form-group">
+				<label class="control-label col-sm-2"> LastName:</label>
+				<div class="col-sm-4">
+					<input type="text" ng-model="user.lastname" class="form-control" placeholder="Enter lastname" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" > Email:</label>
+				<div class="col-sm-4">
+					<input type="text" ng-model="user.email" class="form-control" placeholder="Enter email" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">PhoneNumber:</label>
+				<div class="col-sm-4">
+					<input type="text" ng-model="user.phonenumber" class="form-control" placeholder="Enter phonenumber" required>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Select</label>
+				<div class="col-sm-4">
+				<input type="radio" value="STUDENT" ng-model="user.role">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role">Alumini<br>
+<input type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br>
+</div>
+</div>
+
+			
+			<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-4">
+				<button type="submit" class="btn btn-danger" ng-click="registerUser()"><i class="fa fa-user-plus" aria-hidden="true"></i>Click Here To Register</button>
+				
+					
+				</div>
+			</div>
+			
+</form>
+</div>

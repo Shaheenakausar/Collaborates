@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+body
+{
+    background-image: url("images/job3.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
+}
+table, th, td {
+    border: 1px;
+   
+}
+</style>
+<p class="form-title">
+              <font color="blue">
+<div>
+<div class="container">
+<form name="jobform" class="form-horizontal">
+<div class="form-group">
+ <font color="red">
+<label class="control-label col-sm-2">Search by Title:</label>
+</font>
+<div class="col-sm-4">
+<input type="text" ng-model="jobTitle" class="form-control">
+</div></div></form></div>
+
+<table class="table">
+<thead>
+<tr>
+<th>Title</th>      <th>Posted On</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="job in jobs | filter:jobTitle">
+<td><a href=""ng-click=getJobDetails(job.id)>{{job.jobTitle}}</a></td>
+<td>{{job.postedOn | date : 'yyyy-MM-dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="container">
+<form name="job" class="form-horizontal">
+
+<p class="form-title">
+              <font color="Black">
+				
+		
+<div ng-show="showJobDetails">
+<font color="red">
+ <h2>Job Details:</h2>
+	<div class="form-group">
+	<p class="form-title">
+              <font color="Blue">
+				<label class=" col-sm-2">Job Title</label>
+				<div class="col-sm-4">{{job.jobTitle}} </div>
+			</div>
+			
+			<div class="form-group">
+				<label class=" col-sm-2">Job Description</label>
+				<div class="col-sm-4">{{job.jobDescription}} </div>
+			</div>
+			
+			
+			<div class="form-group">
+				<label class=" col-sm-2">Skills required</label>
+				<div class="col-sm-4">{{job.skillRequired}} </div>
+			</div>
+			
+			
+			<div class="form-group">
+				<label class=" col-sm-2">Years of Experience</label>
+				<div class="col-sm-4">{{job.yrsOfExp}} </div>
+			</div>
+			
+			
+			<div class="form-group">
+				<label class=" col-sm-2">Salary</label>
+				<div class="col-sm-4">{{job.salary}} </div>
+			</div>
+			
+			
+				<div class="form-group">
+				<label class=" col-sm-2">Location</label>
+				<div class="col-sm-4">{{job.location}} </div>
+			</div>
+				<div class="form-group">
+				<label class=" col-sm-2">Company name</label>
+				<div class="col-sm-4">{{job.companyname}} </div>
+			</div>
+			
+				<div class="form-group">
+				<label class=" col-sm-2">Posted on</label>
+				<div class="col-sm-4">{{job.postedOn | date:'yyyy-MM-dd'}} </div>
+			</div>
+			</div>
+	
+	</form>
+	</div>		
+			
