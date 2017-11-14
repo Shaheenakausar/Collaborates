@@ -62,7 +62,7 @@ public class UserDAOImpl implements UserDAO
 		log.info("Validate User Method Started");
 		try
 		{
-			User user =  (User) sessionFactory.getCurrentSession().get(User.class, userName);
+			User user =  sessionFactory.getCurrentSession().get(User.class, userName);
 			if(user.getPassword().equals(password))
 			{
 				user.setErrorCode("200");
@@ -93,7 +93,7 @@ public class UserDAOImpl implements UserDAO
 		log.debug("Starting of Method Get User "+userName);
 		try
 		{
-			User user =  (User) sessionFactory.getCurrentSession().get(User.class, userName);
+			User user =  sessionFactory.getCurrentSession().get(User.class, userName);
 			user.setErrorCode("200");
 			user.setErrorMsg("User Found");
 			return user;

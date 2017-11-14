@@ -39,22 +39,10 @@ public class ApplicationContextConfiguration
 			dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
 			dataSource.setUsername("shaheena");
 			dataSource.setPassword("shaheena");
-			
+			System.out.println("datasource");
 			return dataSource;
-		} /*ORACLE DATABASE IS NOT WORKING*/
-	/*@Bean(name = "dataSource")
-	public DataSource getH2DataSource() {
-
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/collaborate");
-		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUsername("sa");
-		dataSource.setPassword("sa");
-
-		return dataSource;
-	}
-*/		
+		} 
+		
 		private Properties getHibernateProperties()
 		{
 			Properties properties = new Properties();
@@ -62,7 +50,7 @@ public class ApplicationContextConfiguration
 			properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 			properties.put("hibernate.show_sql", "true");
      		properties.put("hibernate.hbm2ddl.auto", "update");
-			
+			System.out.println("hibernate properties");
 			return properties;
 		}
 		
@@ -92,6 +80,7 @@ public class ApplicationContextConfiguration
 		public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory)
 		{
 			HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
+			System.out.println("hibernate transaction manager");
 			return transactionManager;
 		}
 }

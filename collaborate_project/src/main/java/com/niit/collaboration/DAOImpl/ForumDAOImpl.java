@@ -123,7 +123,7 @@ public class ForumDAOImpl implements ForumDAO
 		log.debug("Starting of Method Get Forum");
 		try
 		{
-			Forum forum =  (Forum) sessionFactory.getCurrentSession().get(Forum.class, id);
+			Forum forum =  sessionFactory.getCurrentSession().get(Forum.class, id);
 			forum.setErrorCode("200");
 			forum.setErrorMsg("Forum Found");
 			log.info("Forum found");

@@ -82,7 +82,7 @@ public class JobDAOImpl implements JobDAO
 	{
 		log.info("Delete Job Method Started");
 		try {
-			Job job =  (Job) sessionFactory.getCurrentSession().get(Job.class, job_id);
+			Job job =  sessionFactory.getCurrentSession().get(Job.class, job_id);
 			sessionFactory.getCurrentSession().delete(job);
 			log.info("Delete job Success");
 			return true;
@@ -101,7 +101,7 @@ public class JobDAOImpl implements JobDAO
 		log.info("Invalidate a Job Started");
 		try
 		{
-			Job job =  (Job) sessionFactory.getCurrentSession().get(Job.class, job_id);
+			Job job =  sessionFactory.getCurrentSession().get(Job.class, job_id);
 			Job saveJob = job;
 			sessionFactory.getCurrentSession().delete(job);
 			log.info("Processing Request");

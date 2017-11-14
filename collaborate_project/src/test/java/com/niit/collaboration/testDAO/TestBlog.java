@@ -26,19 +26,18 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	public TestBlog()
 	{	
 		context = new AnnotationConfigApplicationContext();
-		
 		context.scan("com.niit.collaboration");
 		context.refresh();
-		System.out.println("hiiiiiiiiiiiiiiiiiii");
+
 		blogDAO = (BlogDAO) context.getBean("blogDAO");
 		blog = (Blog) context.getBean("blog");
 	}
 	
 	public void addBlog()
 	{
-		blog.setBlog_title("N th Blog");
-		blog.setDescription("Hello");
-		blog.setUsername("testdone");
+		blog.setBlog_title("3rd  Blog");
+		blog.setDescription("Welcome");
+		blog.setUsername("rahul");
 		blog.setDate_time("DATE_TIME");
 		blogDAO.addBlog(blog);
 		System.out.println("Success?");
@@ -46,7 +45,7 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	
 	public void updateBlog()
 	{
-		blog.setBlog_title("Second Blog");
+		blog.setBlog_title("3rd  Blog");
 		blog.setDescription("Hello");
 		blog.setUsername("Admin");
 		blog.setDate_time("DATE_TIME");
@@ -56,7 +55,7 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	
 	public void approveBlog()
 	{
-		blog.setBlog_title("Second Blog");
+		blog.setBlog_title("3rd  Blog");
 		blog.setDescription("Hello");
 		blog.setUsername("Admin");
 		blog.setDate_time("DATE_TIME");
@@ -150,14 +149,14 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	public static void main(String[] args) 
 	{
 		TestBlog tb = new TestBlog();
-	tb.addBlog();
+		tb.addBlog();
 		tb.getAll();
-//		tb.approveBlog();
-//		tb.updateBlog();	
+		tb.approveBlog();
+	//	tb.updateBlog();	
 		tb.getBlog();
-//		tb.deleteBlog();
+	//	tb.deleteBlog();
 		tb.getByUser();
-//		tb.getApprovedBlog();
+		tb.getApprovedBlog();
 		System.out.println("Success");
 	}
 }

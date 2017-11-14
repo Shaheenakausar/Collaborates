@@ -29,7 +29,7 @@ public class TestJob
 		context = new AnnotationConfigApplicationContext();
 		context.scan("com.niit.collaboration");
 		context.refresh();
-		System.out.println("hiiiiiiiiiiiii");
+
 		jobDAO = (JobDAO) context.getBean("jobDAO");
 		job = (Job) context.getBean("job");
 	}
@@ -93,10 +93,10 @@ public class TestJob
 	public static void main(String[] args) 
 	{
 		TestJob tj = new TestJob();
-		tj.addJob();
+//		tj.addJob();
 		tj.listJob();
 //		tj.deleteJob();
 //		tj.inValidate();
-		tj.getJob();
+//		tj.getJob();
 	}
 }

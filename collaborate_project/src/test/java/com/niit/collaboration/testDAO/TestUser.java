@@ -42,15 +42,15 @@ public class TestUser
 	{
 		log.info("Add User Test started");
 		
-		user.setUsername("testuser");
-		user.setFirst_name("Test");
+		user.setUsername("ADMIN");
+		user.setFirst_name("ADMIN");
 		user.setLast_name("");
 		user.setDob(new Date());
-		user.setGender('F');
-		user.setMail_id("testuser@gmail.com");
-		user.setPassword("mahesh");
-		user.setStatus('N');
-		user.setRole("STUDENT");
+		user.setGender('M');
+		user.setMail_id("ADMIN@gmail.com");
+		user.setPassword("ADMIN");
+		user.setStatus('Y');
+		user.setRole("ADMIN");
 		
 		userDAO.addUser(user);
 		log.info("Add User Test end");
@@ -59,7 +59,7 @@ public class TestUser
 	public void getUserDetails()
 	{
 		log.info("Get User Details Started");
-		String userName = "SRINU";
+		String userName = "testuser";
 		user = userDAO.getUser(userName);
 		System.out.println("Name - "+user.getFirst_name());
 		System.out.println("Date - "+user.getDob());
@@ -74,7 +74,7 @@ public class TestUser
 	{
 		log.info("Validate User Started");
 		String userName = "testuser";
-		String password = "student";
+		String password = "da";
 		boolean value = userDAO.validateUser(userName, password);
 		if(value)
 			System.out.println("Valid");
@@ -107,10 +107,10 @@ public class TestUser
 	{
 		TestUser tuser = new TestUser();
 		tuser.testAdd();
-		tuser.getUserDetails();
-		tuser.validateUser();
+	//	tuser.getUserDetails();
+	//	tuser.validateUser();
 //		tuser.deleteUser();
-		tuser.list();
+	//tuser.list();
 		
 		System.out.println("Success");
 	}
