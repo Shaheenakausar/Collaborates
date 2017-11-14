@@ -29,7 +29,7 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 		
 		context.scan("com.niit.collaboration");
 		context.refresh();
-
+		System.out.println("hiiiiiiiiiiiiiiiiiii");
 		blogDAO = (BlogDAO) context.getBean("blogDAO");
 		blog = (Blog) context.getBean("blog");
 	}
@@ -150,13 +150,13 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	public static void main(String[] args) 
 	{
 		TestBlog tb = new TestBlog();
-	//tb.addBlog();
+	tb.addBlog();
 		tb.getAll();
 //		tb.approveBlog();
 //		tb.updateBlog();	
-	//	tb.getBlog();
+		tb.getBlog();
 //		tb.deleteBlog();
-//		tb.getByUser();
+		tb.getByUser();
 //		tb.getApprovedBlog();
 		System.out.println("Success");
 	}

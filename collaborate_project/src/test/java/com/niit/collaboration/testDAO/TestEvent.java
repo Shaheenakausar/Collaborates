@@ -97,9 +97,9 @@ public class TestEvent
 	public static void main(String[] args) 
 	{
 		TestEvent test = new TestEvent();
-//		test.add();
+		test.add();
 //		test.delete();
-//		test.getEvent();
+		test.getEvent();
 		test.listEvent();
 	}
 }
