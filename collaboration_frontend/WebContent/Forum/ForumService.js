@@ -1,7 +1,7 @@
 app.factory('ForumService', function($http, $q, $location, $rootScope)
 {
 	console.log("Entering Forum Service")
-	var BASE_URL = "http://localhost:8082/collaborationControllers/"
+	var BASE_URL = "http://localhost:8085/collaboration_frontend/"
 		return{
 		
 	listForum: function()

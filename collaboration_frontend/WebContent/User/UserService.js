@@ -1,7 +1,7 @@
 app.factory('UserService', function($http, $q, $rootScope)
 {
 	console.log("Entering UserService")
-	var BASE_URL = "http://localhost:8082/collaborationControllers/"
+	var BASE_URL = "http://localhost:8085/collaboration_frontend/"
 		return{
 	//var userService = this;
 	

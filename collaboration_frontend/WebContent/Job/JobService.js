@@ -1,7 +1,7 @@
 app.factory('JobService', function($http)
 {
 	console.log("Entering JobService")
-	var BASE_URL = "http://localhost:8082/collaborationControllers/"
+	var BASE_URL = "http://localhost:8085/collaboration_frontend/"
 		return{
 		
 	listJob: function()

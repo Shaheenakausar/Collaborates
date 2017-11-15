@@ -150,13 +150,13 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	{
 		TestBlog tb = new TestBlog();
 		tb.addBlog();
-		tb.getAll();
+		/*tb.getAll();
 		tb.approveBlog();
 	//	tb.updateBlog();	
 		tb.getBlog();
 	//	tb.deleteBlog();
 		tb.getByUser();
-		tb.getApprovedBlog();
+		tb.getApprovedBlog();*/
 		System.out.println("Success");
 	}
 }
