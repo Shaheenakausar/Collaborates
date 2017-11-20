@@ -108,7 +108,7 @@ public class TestFriend
 	public static void main(String[] args) 
 	{
 		TestFriend test = new TestFriend();
-//		test.addFriend();
+		test.addFriend();
 //		test.acceptFriend();
 //		test.removeFriend();
 //		test.getFriendList();

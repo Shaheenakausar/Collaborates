@@ -93,7 +93,7 @@ public class TestJob
 	public static void main(String[] args) 
 	{
 		TestJob tj = new TestJob();
-//		tj.addJob();
+		tj.addJob();
 		tj.listJob();
 //		tj.deleteJob();
 //		tj.inValidate();

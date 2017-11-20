@@ -35,9 +35,9 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	
 	public void addBlog()
 	{
-		blog.setBlog_title("3rd  Blog");
-		blog.setDescription("Welcome");
-		blog.setUsername("rahul");
+		blog.setBlog_title("N th Blog");
+		blog.setDescription("Hello");
+		blog.setUsername("testdone");
 		blog.setDate_time("DATE_TIME");
 		blogDAO.addBlog(blog);
 		System.out.println("Success?");
@@ -45,7 +45,7 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	
 	public void updateBlog()
 	{
-		blog.setBlog_title("3rd  Blog");
+		blog.setBlog_title("Second Blog");
 		blog.setDescription("Hello");
 		blog.setUsername("Admin");
 		blog.setDate_time("DATE_TIME");
@@ -55,7 +55,7 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	
 	public void approveBlog()
 	{
-		blog.setBlog_title("3rd  Blog");
+		blog.setBlog_title("Second Blog");
 		blog.setDescription("Hello");
 		blog.setUsername("Admin");
 		blog.setDate_time("DATE_TIME");
@@ -149,14 +149,14 @@ Logger log = LoggerFactory.getLogger(TestUser.class);
 	public static void main(String[] args) 
 	{
 		TestBlog tb = new TestBlog();
-		tb.addBlog();
-		/*tb.getAll();
-		tb.approveBlog();
-	//	tb.updateBlog();	
+	tb.addBlog();
+		tb.getAll();
+//		tb.approveBlog();
+//		tb.updateBlog();	
 		tb.getBlog();
-	//	tb.deleteBlog();
-		tb.getByUser();
-		tb.getApprovedBlog();*/
+//		tb.deleteBlog();
+//		tb.getByUser();
+//		tb.getApprovedBlog();
 		System.out.println("Success");
 	}
 }

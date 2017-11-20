@@ -77,7 +77,7 @@ public class TestComment
 	{
 		TestComment tc = new TestComment();
 		tc.addBlogComment();
-		tc.deleteComment();
+//		tc.deleteComment();
 		tc.list();
 		System.out.println("Success");
 	}

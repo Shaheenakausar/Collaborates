@@ -41,7 +41,7 @@ public class TestEvent
 		event.setTime("23:00");
 		event.setDate(new Date());
 		event.setDescription(" ");
-		event.setVenue("Zero G, Brigade Road");
+		event.setVenue("BLOCK D, MG Road, Hyd");
 		
 		Date_Time dt = new Date_Time();
 		String date = dt.getDateTime();
@@ -97,9 +97,9 @@ public class TestEvent
 	public static void main(String[] args) 
 	{
 		TestEvent test = new TestEvent();
-//		test.add();
-//		test.delete();
-//		test.getEvent();
+		test.add();
+		test.delete();
+		test.getEvent();
 		test.listEvent();
 	}
 }

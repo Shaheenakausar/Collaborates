@@ -141,13 +141,13 @@ public class TestForum
 	public static void main(String[] args) 
 	{
 		TestForum test = new TestForum();
-//		test.addForum();
+		test.addForum();
 //		test.updateForum();
 //		test.deleteForum();
-//		test.getForum();
+		test.getForum();
 //		test.accept();
 		test.listUserForum();
 //		test.listAllForums();
-//		test.viewApprovedForums();
+		test.viewApprovedForums();
 	}
 }
