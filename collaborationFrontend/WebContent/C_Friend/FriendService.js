@@ -1,7 +1,7 @@
 app.factory('FriendService', function($http)
 	{
 		console.log("Entering UserService")
-		var BASE_URL = "http://localhost:8080/collaborationControllers/"
+		var BASE_URL = "http://localhost:8085/collaborationControllers/"
 		var friendService = this;
 		
 		friendService.getAllFriends = function()

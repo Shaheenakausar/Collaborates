@@ -2,24 +2,27 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.niit</groupId>
-	<artifactId>collaboration_middleware</artifactId>
+	<artifactId>collaborationControllers</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>collaboration_middleware Maven Webapp</name>
+	<name>collaborationControllers Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<version>4.12</version>
 		</dependency>
+
+		<!-- Dependency of BackEnd in Controllers -->
 		<dependency>
 			<groupId>com.niit</groupId>
-			<artifactId>collaborate_project</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-
+			<artifactId>collaborationBackEnd</artifactId>
+			<version>1.0.0</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -127,6 +130,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>collaboration_middleware</finalName>
+
+
+		<finalName>collaborationControllers</finalName>
 	</build>
 </project>
